@@ -140,6 +140,17 @@ function defineAndRunBuildTasks() {
     ),
   );
 
+  // build production-like distributable build
+  createTask(
+    TASKS.DIST,
+    composeSeries(
+      clean,
+      styleTasks.prod,
+      composeParallel(scriptTasks.dist, staticTasks.prod, manifestTasks.prod),
+      zip,
+    ),
+  );
+
   // build for prod release
   createTask(
     TASKS.PROD,
@@ -152,7 +163,7 @@ function defineAndRunBuildTasks() {
   );
 
   // build just production scripts, for LavaMoat policy generation purposes
-  createTask(TASKS.SCRIPTS_PROD, scriptTasks.prod);
+  createTask(TASKS.SCRIPTS_DIST, scriptTasks.dist);
 
   // build for CI testing
   createTask(

@@ -1,5 +1,6 @@
 const BUILD_TARGETS = {
   DEVELOPMENT: 'dev',
+  DISTRIBUTION: 'dist',
   PRODUCTION: 'prod',
   E2E_TEST: 'test',
   E2E_TEST_DEV: 'testDev',
@@ -8,6 +9,7 @@ const BUILD_TARGETS = {
 const TASKS = {
   CLEAN: 'clean',
   DEV: 'dev',
+  DIST: 'dist',
   LINT_SCSS: 'lint-scss',
   MANIFEST_DEV: 'manifest:dev',
   MANIFEST_PROD: 'manifest:prod',
@@ -15,13 +17,18 @@ const TASKS = {
   MANIFEST_TEST_DEV: 'manifest:testDev',
   PROD: 'prod',
   RELOAD: 'reload',
-  SCRIPTS_PROD: 'scripts:prod',
   SCRIPTS_CORE_DEV_STANDARD_ENTRY_POINTS:
     'scripts:core:dev:standardEntryPoints',
   SCRIPTS_CORE_DEV_CONTENTSCRIPT: 'scripts:core:dev:contentscript',
   SCRIPTS_CORE_DEV_DISABLE_CONSOLE: 'scripts:core:dev:disable-console',
   SCRIPTS_CORE_DEV_SENTRY: 'scripts:core:dev:sentry',
   SCRIPTS_CORE_DEV_PHISHING_DETECT: 'scripts:core:dev:phishing-detect',
+  SCRIPTS_CORE_DIST_STANDARD_ENTRY_POINTS:
+    'scripts:core:dist:standardEntryPoints',
+  SCRIPTS_CORE_DIST_CONTENTSCRIPT: 'scripts:core:dist:contentscript',
+  SCRIPTS_CORE_DIST_DISABLE_CONSOLE: 'scripts:core:dist:disable-console',
+  SCRIPTS_CORE_DIST_SENTRY: 'scripts:core:dist:sentry',
+  SCRIPTS_CORE_DIST_PHISHING_DETECT: 'scripts:core:dist:phishing-detect',
   SCRIPTS_CORE_PROD_STANDARD_ENTRY_POINTS:
     'scripts:core:prod:standardEntryPoints',
   SCRIPTS_CORE_PROD_CONTENTSCRIPT: 'scripts:core:prod:contentscript',
@@ -42,6 +49,7 @@ const TASKS = {
   SCRIPTS_CORE_TEST_DISABLE_CONSOLE: 'scripts:core:test:disable-console',
   SCRIPTS_CORE_TEST_SENTRY: 'scripts:core:test:sentry',
   SCRIPTS_CORE_TEST_PHISHING_DETECT: 'scripts:core:test:phishing-detect',
+  SCRIPTS_DIST: 'scripts:dist',
   STATIC_DEV: 'static:dev',
   STATIC_PROD: 'static:prod',
   STYLES: 'styles',

@@ -4101,7 +4101,6 @@
         "gulp-watch>chokidar>anymatch": true,
         "gulp-watch>chokidar>async-each": true,
         "gulp-watch>chokidar>braces": true,
-        "gulp-watch>chokidar>fsevents": true,
         "gulp-watch>chokidar>is-binary-path": true,
         "gulp-watch>chokidar>normalize-path": true,
         "gulp-watch>chokidar>readdirp": true,
