@@ -9,11 +9,7 @@ import Identicon from '../identicon/identicon.component';
 import { shortenAddress } from '../../../helpers/utils/util';
 import CopyIcon from '../icon/copy-icon.component';
 import { useCopyToClipboard } from '../../../hooks/useCopyToClipboard';
-import {
-  getIsTokenDetectionInactiveOnMainnet,
-  getTokenList,
-} from '../../../selectors';
-import { STATIC_MAINNET_TOKEN_LIST } from '../../../../shared/constants/tokens';
+import { getTokenList } from '../../../selectors';
 
 const NicknamePopover = ({
   address,
@@ -30,12 +26,6 @@ const NicknamePopover = ({
 
   const [copied, handleCopy] = useCopyToClipboard();
   const tokenList = useSelector(getTokenList);
-  const isTokenDetectionInactiveOnMainnet = useSelector(
-    getIsTokenDetectionInactiveOnMainnet,
-  );
-  const caseInSensitiveTokenList = isTokenDetectionInactiveOnMainnet
-    ? STATIC_MAINNET_TOKEN_LIST
-    : tokenList;
 
   return (
     <div className="nickname-popover">
@@ -44,7 +34,7 @@ const NicknamePopover = ({
           address={address}
           diameter={36}
           className="nickname-popover__identicon"
-          image={caseInSensitiveTokenList[address.toLowerCase()]?.iconUrl}
+          image={tokenList[address.toLowerCase()]?.iconUrl}
         />
         <div className="nickname-popover__address">
           {nickname || shortenAddress(address)}
