@@ -1653,14 +1653,10 @@ export function showAccountDetail(address) {
     log.debug(`background.setSelectedAddress`);
 
     const state = getState();
-    const unconnectedAccountAccountAlertIsEnabled = getUnconnectedAccountAlertEnabledness(
-      state,
-    );
+    const unconnectedAccountAccountAlertIsEnabled = getUnconnectedAccountAlertEnabledness(state);
     const activeTabOrigin = state.activeTab.origin;
     const selectedAddress = getSelectedAddress(state);
-    const permittedAccountsForCurrentTab = getPermittedAccountsForCurrentTab(
-      state,
-    );
+    const permittedAccountsForCurrentTab = getPermittedAccountsForCurrentTab(state);
     const currentTabIsConnectedToPreviousAddress =
       Boolean(activeTabOrigin) &&
       permittedAccountsForCurrentTab.includes(selectedAddress);
