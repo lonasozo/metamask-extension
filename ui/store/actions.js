@@ -385,7 +385,7 @@ export function resetAccount() {
     dispatch(showLoadingIndication());
 
     return new Promise((resolve, reject) => {
-      callBackgroundMethod('resetAccount', (err, account) => {
+      callBackgroundMethod('resetAccount', [], (err, account) => {
         dispatch(hideLoadingIndication());
         if (err) {
           dispatch(displayWarning(err.message));
@@ -806,7 +806,7 @@ const updateMetamaskStateFromBackground = () => {
   log.debug(`background.getState`);
 
   return new Promise((resolve, reject) => {
-    callBackgroundMethod('getState', (error, newState) => {
+    callBackgroundMethod('getState', [], (error, newState) => {
       if (error) {
         reject(error);
         return;
@@ -1653,12 +1653,14 @@ export function showAccountDetail(address) {
     log.debug(`background.setSelectedAddress`);
 
     const state = getState();
-    const unconnectedAccountAccountAlertIsEnabled =
-      getUnconnectedAccountAlertEnabledness(state);
+    const unconnectedAccountAccountAlertIsEnabled = getUnconnectedAccountAlertEnabledness(
+      state,
+    );
     const activeTabOrigin = state.activeTab.origin;
     const selectedAddress = getSelectedAddress(state);
-    const permittedAccountsForCurrentTab =
-      getPermittedAccountsForCurrentTab(state);
+    const permittedAccountsForCurrentTab = getPermittedAccountsForCurrentTab(
+      state,
+    );
     const currentTabIsConnectedToPreviousAddress =
       Boolean(activeTabOrigin) &&
       permittedAccountsForCurrentTab.includes(selectedAddress);
@@ -2970,10 +2972,13 @@ export function setSwapsFeatureFlags(featureFlags) {
 
 export function fetchAndSetQuotes(fetchParams, fetchParamsMetaData) {
   return async (dispatch) => {
-    const [quotes, selectedAggId] = await submitRequestToBackground(
-      'fetchAndSetQuotes',
-      [fetchParams, fetchParamsMetaData],
-    );
+    const [
+      quotes,
+      selectedAggId,
+    ] = await submitRequestToBackground('fetchAndSetQuotes', [
+      fetchParams,
+      fetchParamsMetaData,
+    ]);
     await forceUpdateMetamaskState(dispatch);
     return [quotes, selectedAggId];
   };
