@@ -74,10 +74,10 @@ const removeFromActionQueue = (queue, actionId) => {
   queue.splice(index, 1);
 };
 
-// Function below invokes promisifiedBackground method in MV2 content
+// Function below invokes promisifiedBackground method in MV2 context
 // In MV3 context the execution is:
 //   1. action is added to retry queue, along with resolve handler to be executed on completion of action
-//   2. is streams are connected promisifiedBackground method is called
+//   2. if streams are connected promisifiedBackground method is called
 //   3. on completion of action either successfully or by throwing exception, action is removed from retry queue
 const submitRequestToBackground = (
   method,
