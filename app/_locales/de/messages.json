@@ -230,6 +230,10 @@
   "alerts": {
     "message": "Warnungen"
   },
+  "allOfYour": {
+    "message": "Alle Ihre $1",
+    "description": "$1 is the symbol or name of the token that the user is approving spending"
+  },
   "allowExternalExtensionTo": {
     "message": "Erlauben dieser externen Erweiterung auf:"
   },
@@ -265,6 +269,10 @@
   },
   "approve": {
     "message": "Genehmigen"
+  },
+  "approveAllTokensTitle": {
+    "message": "Erlaubnis zum Zugriff auf alle Ihre $1 erteilen?",
+    "description": "$1 is the symbol of the token for which the user is granting approval"
   },
   "approveAndInstall": {
     "message": "Genehmigen und installieren"
@@ -1284,6 +1292,9 @@
   "functionApprove": {
     "message": "Funktion: Freigabe"
   },
+  "functionSetApprovalForAll": {
+    "message": "Funktion: ErlaubnisFürAlle"
+  },
   "functionType": {
     "message": "Funktionstyp"
   },
@@ -1624,6 +1635,9 @@
   "invalidSeedPhrase": {
     "message": "Ungültiger Seedschlüssel"
   },
+  "invalidSeedPhraseCaseSensitive": {
+    "message": "Ungültige Eingabe! Die geheime Wiederherstellungsphrase berücksichtigt Groß- und Kleinschreibung."
+  },
   "ipfsGateway": {
     "message": "IPFS-Gateway"
   },
@@ -1899,6 +1913,19 @@
     "message": "die Netzwerkdetails überprüfen",
     "description": "Serves as link text for the 'mismatchedChain' key. This text will be embedded inside the translation for that key."
   },
+  "mismatchedChainRecommendation": {
+    "message": "Wir empfehlen, dass Sie vor dem Fortfahren $1.",
+    "description": "$1 is a clickable link with text defined by the 'mismatchedChainLinkText' key. The link will open to instructions for users to validate custom network details."
+  },
+  "mismatchedNetworkName": {
+    "message": "Laut unseren Aufzeichnungen stimmt dieser Netzwerkname nicht mit dieser Chain-ID überein."
+  },
+  "mismatchedNetworkSymbol": {
+    "message": "Das angegebene Währungssymbol entspricht nicht dem Symbol, das wir für diese Chain-ID erwarten."
+  },
+  "mismatchedRpcUrl": {
+    "message": "Laut unseren Aufzeichnungen stimmt der angegebene RPC-URL-Wert nicht mit einem bekannten Provider für diese Chain-ID überein."
+  },
   "missingNFT": {
     "message": "Sie sehen Ihr NFT nicht?"
   },
@@ -2171,6 +2198,16 @@
   },
   "notifications12Title": {
     "message": "Wann Dunkelmodus? Jetzt Dunkelmodus! 🕶️🦊"
+  },
+  "notifications13ActionText": {
+    "message": "Benutzerdefinierte Netzwerkliste anzeigen"
+  },
+  "notifications13Description": {
+    "message": "Sie können die folgenden beliebten Netzwerke jetzt einfach hinzufügen: Arbitrum, Avalanche, Binance Smart Chain, Fantom, Optimism, Palm und Polygon! Um diese Funktion zu aktivieren, gehen Sie zu den Einstellungen -> „Experimentell“ und schalten Sie „Benutzerdefinierte Netzwerklisten anzeigen“ ein!",
+    "description": "Description of a notification in the 'See What's New' popup. Describes popular network feature."
+  },
+  "notifications13Title": {
+    "message": "Beliebte Netzwerke hinzufügen"
   },
   "notifications1Description": {
     "message": "Mobile MetaMask-Anwender können jetzt Token in ihren mobilen Wallets swappen. Scannen Sie den QR-Code, um die mobile App zu erhalten und mit dem Swapping zu beginnen.",
@@ -2686,6 +2723,14 @@
   "revealTheSeedPhrase": {
     "message": "Seed-Phrase anzeigen"
   },
+  "revokeAllTokensTitle": {
+    "message": "Erlaubnis zum Zugriff auf alle Ihre $1 entziehen?",
+    "description": "$1 is the symbol of the token for which the user is revoking approval"
+  },
+  "revokeApproveForAllDescription": {
+    "message": "Wenn Sie diese Erlaubnis entziehen, wird folgendes $1 nicht mehr dazu in der Lage sein, auf Ihre $2 zuzugreifen",
+    "description": "$1 is either key 'account' or 'contract', and $2 is either a string or link of a given token symbol or name"
+  },
   "rinkeby": {
     "message": "Rinkeby Testnetzwerk"
   },
@@ -2862,11 +2907,22 @@
     "message": "$1 senden",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
   },
+  "sendingToTokenContractWarning": {
+    "message": "Warnung: Sie sind im Begriff, einen Token-Contract zu verwenden, der in einem Verlust resultieren könnte. $1",
+    "description": "$1 is a clickable link with text defined by the 'learnMoreUpperCase' key. The link will open to a support article regarding the known contract address warning"
+  },
   "setAdvancedPrivacySettings": {
     "message": "Erweiterte Privatsphäre-Einstellungen festlegen"
   },
   "setAdvancedPrivacySettingsDetails": {
     "message": "MetaMask nutzt diese vertrauenswürdigen Dienstleistungen von Drittanbietern, um die Benutzerfreundlichkeit und Sicherheit der Produkte zu verbessern."
+  },
+  "setApprovalForAll": {
+    "message": "Erlaubnis für alle erteilen"
+  },
+  "setApprovalForAllTitle": {
+    "message": "$1 ohne Ausgabenlimit genehmigen",
+    "description": "The token symbol that is being approved"
   },
   "settings": {
     "message": "Einstellungen"

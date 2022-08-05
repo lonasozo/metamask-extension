@@ -293,9 +293,6 @@
   "approvedAsset": {
     "message": "已获批准的资产"
   },
-  "areYouDeveloper": {
-    "message": "您是开发人员吗？"
-  },
   "areYouSure": {
     "message": "您确定吗？"
   },
@@ -2396,9 +2393,6 @@
   "openFullScreenForLedgerWebHid": {
     "message": "全屏打开 MetaMask 以通过 WebHID 连接您的 ledger。",
     "description": "Shown to the user on the confirm screen when they are viewing MetaMask in a popup window but need to connect their ledger via webhid."
-  },
-  "openSourceCode": {
-    "message": "检查源代码"
   },
   "optional": {
     "message": "可选"
